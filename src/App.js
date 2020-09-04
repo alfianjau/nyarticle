@@ -1,6 +1,7 @@
 import React from 'react'
 import theme from './utils/theme'
 import { Application, Button } from 'react-rainbow-components'
+import Home from './pages/home/index'
 import logo from './logo.svg'
 import './App.css'
 
@@ -11,6 +12,7 @@ function App() {
         theme={theme}
         className="rainbow-p-vertical_xx-large rainbow-align-content_center"
       >
+        <Home theme={theme} />
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
