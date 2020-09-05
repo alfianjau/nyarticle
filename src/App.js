@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import AppRoutes from './utils/routes'
 import themes from './utils/theme'
 import Layout from './components/atom/layout'
+import SearchInput from './components/atom/input'
 import './App.css'
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
       >
         <Router>
           <Layout onSwitchTheme={toggleTheme} theme={theme}>
+            <SearchInput />
             <AppRoutes />
             <Button
               label="Button Brand"
