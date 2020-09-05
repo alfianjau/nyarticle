@@ -1,37 +1,41 @@
-import React from 'react'
-import theme from './utils/theme'
+import React, { useState } from 'react'
 import { Application, Button } from 'react-rainbow-components'
-import Home from './pages/home/index'
-import logo from './logo.svg'
+import { BrowserRouter as Router } from 'react-router-dom'
+import AppRoutes from './utils/routes'
+import themes from './utils/theme'
+import Layout from './components/atom/layout'
 import './App.css'
 
 function App() {
+  const [theme, setTheme] = useState(
+    () => localStorage.getItem('theme') || 'light'
+  )
+
+  const toggleTheme = () => {
+    if (theme === 'light') {
+      setTheme('dark')
+      localStorage.setItem('theme', 'dark')
+    } else {
+      setTheme('light')
+      localStorage.setItem('theme', 'light')
+    }
+  }
   return (
     <div className="App">
       <Application
-        theme={theme}
+        theme={themes[theme]}
         className="rainbow-p-vertical_xx-large rainbow-align-content_center"
       >
-        <Home theme={theme} />
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
+        <Router>
+          <Layout onSwitchTheme={toggleTheme} theme={theme}>
+            <AppRoutes />
             <Button
               label="Button Brand"
               onClick={() => alert('clicked!')}
               variant="brand"
             />
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+          </Layout>
+        </Router>
       </Application>
     </div>
   )
