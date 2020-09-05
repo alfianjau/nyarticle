@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
-import Home from '../pages/home'
-import Article from '../pages/article'
+// import Home from '../pages/home'
+// import Article from '../pages/article'
 
 const AppRoutes = () => {
   return (
@@ -9,7 +9,7 @@ const AppRoutes = () => {
       <Route exact path="/">
         Home
       </Route>
-      <Route exact path="/">
+      <Route exact path="/article/:id">
         Second{' '}
       </Route>
       <Redirect to="/" />
