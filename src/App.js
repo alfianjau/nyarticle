@@ -1,8 +1,8 @@
 import React, { useState, useCallback } from 'react'
 import themes from './utils/theme'
 import { Application, Button } from 'react-rainbow-components'
-import axios from 'axios'
 import { BrowserRouter as Router } from 'react-router-dom'
+import { search } from './utils/api'
 import AppRoutes from './utils/routes'
 import Layout from './components/atom/layout'
 import SearchInput from './components/atom/input'
@@ -18,6 +18,8 @@ function App() {
     articles: null,
     value: '',
   })
+
+  // toggle dark and light theme
   const toggleTheme = () => {
     if (theme === 'light') {
       setTheme('dark')
@@ -28,29 +30,29 @@ function App() {
     }
   }
 
-  const search = async (val) => {
+  async function searchTitle(val) {
     setAppState({ loading: true })
-    const res = await axios(
+    const res = await search(
       `https://api.nytimes.com/svc/search/v2/articlesearch.json?facet=true&facet_fields=type_of_material&facet_filter=true&fq=News&q=${val}&sort=newest&api-key=${process.env.REACT_APP_NY_API_KEY}`
     )
-    const articles = await res.data.docs
+    const articles = res
 
-    setAppState({ articles, loading: false })
+    setAppState({ articles })
   }
 
   const onChangeHandler = async (e) => {
-    search(e.target.value)
+    searchTitle(e.target.value)
     setAppState({ value: e.target.value })
   }
 
-  const renderArticles = useCallback(() => {
+  /* const renderArticles = useCallback(() => {
     let tempArticles = <h1>There's no articles</h1>
     if (appState.articles) {
       tempArticles = <Articles articles={appState.articles} />
     } else {
     }
     return tempArticles
-  }, [appState.articles])
+  }, [appState.articles]) */
 
   return (
     <div className="App">
@@ -62,7 +64,7 @@ function App() {
           <Layout onSwitchTheme={toggleTheme} theme={theme}>
             <SearchInput onChange={(e) => onChangeHandler(e)} />
             <AppRoutes />
-            {renderArticles()}
+            <Articles articles={appState.articles} />
             <Button
               label="Button Brand"
               onClick={() => alert('clicked!')}
