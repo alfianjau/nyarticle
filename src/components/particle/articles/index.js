@@ -1,11 +1,14 @@
 import React from 'react'
-// import Article from '../../molecule/article'
+import Article from '../../molecule/article'
 
 const Articles = ({ articles }) => {
   return (
     <div className="article-listing">
       <div className="article-list">
-        {articles && articles.map((article) => <h2> {article.text}</h2>)}
+        {articles &&
+          articles.map((article) => (
+            <Article key={article._id} item={article} />
+          ))}
       </div>
     </div>
   )
