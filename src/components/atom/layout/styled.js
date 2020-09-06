@@ -4,9 +4,10 @@ export const MainWrapper = styled.main`
   position: relative;
   width: 100%;
   padding-bottom: 43px;
-  background-color: blue;
+  background-color: ${(props) =>
+    props.theme.rainbow.palette.background.secondary};
   font-family: Lato, sans-serif;
-  color: green;
+  color: ${(props) => props.theme.rainbow.palette.text.header};
   font-weight: 400;
   min-height: 100vh;
 `
