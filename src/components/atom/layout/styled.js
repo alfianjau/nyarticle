@@ -7,7 +7,7 @@ export const MainWrapper = styled.main`
   background-color: ${(props) =>
     props.theme.rainbow.palette.background.secondary};
   font-family: Lato, sans-serif;
-  color: ${(props) => props.theme.rainbow.palette.text.header};
+  color: ${(props) => props.theme.rainbow.palette.text.title};
   font-weight: 400;
   min-height: 100vh;
 `

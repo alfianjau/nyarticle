@@ -17,7 +17,7 @@ const Header = ({ onSwitchTheme, theme }) => {
     <Wrapper>
       <LogoWrapper>
         <Link to={homePageUrl}>
-          <Logo src="/assets/logo.svg" />
+          <Logo src="logo.svg" />
         </Link>
       </LogoWrapper>
       <TopActions>

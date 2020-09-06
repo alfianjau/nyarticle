@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react'
+import React, { useState } from 'react'
 import themes from './utils/theme'
 import { Application, Button } from 'react-rainbow-components'
 import { BrowserRouter as Router } from 'react-router-dom'
@@ -45,14 +45,14 @@ function App() {
     setAppState({ value: e.target.value })
   }
 
-  /* const renderArticles = useCallback(() => {
+  /* const renderArticles = () => {
     let tempArticles = <h1>There's no articles</h1>
+
     if (appState.articles) {
       tempArticles = <Articles articles={appState.articles} />
-    } else {
     }
     return tempArticles
-  }, [appState.articles]) */
+  } */
 
   return (
     <div className="App">
@@ -64,7 +64,11 @@ function App() {
           <Layout onSwitchTheme={toggleTheme} theme={theme}>
             <SearchInput onChange={(e) => onChangeHandler(e)} />
             <AppRoutes />
-            <Articles articles={appState.articles} />
+            {appState.articles ? (
+              <Articles articles={appState.articles} />
+            ) : (
+              <h1>There's no articles{console.log(appState)}</h1>
+            )}
             <Button
               label="Button Brand"
               onClick={() => alert('clicked!')}
