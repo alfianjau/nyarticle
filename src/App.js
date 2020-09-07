@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useReducer } from 'react'
 import themes from './utils/theme'
 import { Application, Spinner } from 'react-rainbow-components'
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Link } from 'react-router-dom'
 import debounce from 'lodash.debounce'
 import axios from 'axios'
 import { fetchReducer, fetchHits } from './utils/services'
