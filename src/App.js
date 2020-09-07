@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useReducer } from 'react'
 import themes from './utils/theme'
-import { Application } from 'react-rainbow-components'
+import { Application, Spinner } from 'react-rainbow-components'
 import { BrowserRouter as Router } from 'react-router-dom'
 // import { search } from './utils/api'
 import debounce from 'lodash.debounce'
@@ -104,11 +104,7 @@ function App() {
             />
             <AppRoutes />
             {hasError && <div>Something went wrong ...</div>}
-            {isLoading ? (
-              <div>Loading ...</div>
-            ) : (
-              <Articles articles={articles} />
-            )}
+            {isLoading ? <Spinner /> : <Articles articles={articles} />}
           </Layout>
         </Router>
       </Application>
