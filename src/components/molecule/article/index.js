@@ -16,11 +16,11 @@ const Article = (props) => {
 
         <p>{lead_paragraph}</p>
         <Button
-          label="Button Brand"
-          variant="brand"
+          label="Button Outline Brand"
+          variant="outline-brand"
           className="rainbow-m-around_medium"
         >
-          <Link to={_id}>Details</Link>
+          <Link to={_id.substr(6)}>Details</Link>
         </Button>
       </Card>
     </div>

@@ -7,9 +7,8 @@ import { Card } from 'react-rainbow-components'
 
 // const homeUrl = '/'
 
-const ArticleDetail = () => {
+const ArticleDetail = ({ abstract, snippet }) => {
   //   const { _id } = useParams()
-  //   const { abstract, snippet } = props
 
   return (
     <>
@@ -18,7 +17,9 @@ const ArticleDetail = () => {
       <ContainerMedium>
         <HeadingFlex>
           <Link to="/">back to Home</Link>
+          <p>{abstract}</p>
           <Card title="testing artikel" />
+          <p>{snippet}</p>
           {/* <img
           src={`https://nytimes.com/${multimedia[1].url}`}
           className="rainbow-p-around_xx-large rainbow-m_auto rainbow-align-content_center"

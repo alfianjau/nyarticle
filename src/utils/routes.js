@@ -9,7 +9,7 @@ const AppRoutes = () => {
       <Route exact path="/">
         Home
       </Route>
-      <Route path="/article">
+      <Route path="/article/:id">
         <ArticleDetail />
       </Route>
       <Redirect to="/">back to Home</Redirect>
