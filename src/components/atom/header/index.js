@@ -4,6 +4,7 @@ import { ButtonIcon } from 'react-rainbow-components'
 import { Link } from 'react-router-dom'
 import { MoonIcon, SunIcon, GitIcon } from '../icons'
 import { Wrapper, LogoWrapper, Logo, TopActions, TopAction } from './styled'
+import logo from '../../../logo.svg'
 
 const homePageUrl = '/'
 const gitUrl = 'https://github.com/alfianjau/nyarticle'
@@ -17,7 +18,7 @@ const Header = ({ onSwitchTheme, theme }) => {
     <Wrapper>
       <LogoWrapper>
         <Link to={homePageUrl}>
-          <Logo src="logo.svg" />
+          <Logo src={logo} />
         </Link>
       </LogoWrapper>
       <TopActions>
