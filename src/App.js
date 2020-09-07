@@ -98,11 +98,11 @@ function App() {
       >
         <Router>
           <Layout onSwitchTheme={toggleTheme} theme={theme}>
+            <AppRoutes />
             <SearchInput
               value={query}
               onChange={(event) => setQuery(event.target.value)}
             />
-            <AppRoutes />
             {hasError && <div>Something went wrong ...</div>}
             {isLoading ? <Spinner /> : <Articles articles={articles} />}
           </Layout>

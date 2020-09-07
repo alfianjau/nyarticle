@@ -1,8 +1,9 @@
 import React from 'react'
-import { Card } from 'react-rainbow-components'
+import { Card, Button } from 'react-rainbow-components'
+import { Link } from 'react-router-dom'
 
 const Article = (props) => {
-  const { snippet, lead_paragraph } = props.item
+  const { snippet, lead_paragraph, _id } = props.item
 
   return (
     <div className="rainbow-p-around_large">
@@ -12,7 +13,15 @@ const Article = (props) => {
           className="rainbow-p-around_xx-large rainbow-m_auto rainbow-align-content_center"
           alt="landscape with rainbows, birds and colorful balloons"
         /> */}
-        <span>{lead_paragraph}</span>
+
+        <p>{lead_paragraph}</p>
+        <Button
+          label="Button Brand"
+          variant="brand"
+          className="rainbow-m-around_medium"
+        >
+          <Link to={_id}>Details</Link>
+        </Button>
       </Card>
     </div>
   )
