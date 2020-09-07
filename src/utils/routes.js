@@ -1,13 +1,13 @@
 import React from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
-// import Home from '../pages/home'
+import Home from '../pages/home'
 import ArticleDetail from '../pages/detail'
 
 const AppRoutes = () => {
   return (
     <Switch>
       <Route exact path="/">
-        Home
+        <Home />
       </Route>
       <Route path="/article/:id">
         <ArticleDetail />

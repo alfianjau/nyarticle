@@ -1,0 +1,44 @@
+import React, { useState, useEffect, useReducer } from 'react'
+import { Spinner } from 'react-rainbow-components'
+// import { BrowserRouter as Router, Link } from 'react-router-dom'
+import debounce from 'lodash.debounce'
+import axios from 'axios'
+import { fetchReducer, fetchHits } from '../../utils/services'
+import SearchInput from '../../components/atom/input'
+import Articles from '../../components/particle/articles'
+
+function Home() {
+  const [{ articles, hasError, isLoading }, dispatch] = useReducer(
+    fetchReducer,
+    {
+      articles: [],
+      isLoading: true,
+      hasError: false,
+    }
+  )
+
+  const [query, setQuery] = useState('new york')
+
+  useEffect(() => {
+    const { cancel, token } = axios.CancelToken.source()
+    const debouncedFetchHits = debounce(
+      () => fetchHits(query, dispatch, token),
+      500
+    )
+    debouncedFetchHits()
+    return () => cancel('No longer latest query') || debouncedFetchHits.cancel()
+  }, [query])
+
+  return (
+    <div>
+      <SearchInput
+        value={query}
+        onChange={(event) => setQuery(event.target.value)}
+      />
+      {hasError && <div>Something went wrong ...</div>}
+      {isLoading ? <Spinner /> : <Articles articles={articles} />}
+    </div>
+  )
+}
+
+export default Home

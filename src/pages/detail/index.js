@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { ContainerMedium } from '../globalStyled'
 import { HeadingFlex } from './styled'
 import { Card } from 'react-rainbow-components'
@@ -7,8 +7,9 @@ import { Card } from 'react-rainbow-components'
 
 // const homeUrl = '/'
 
-const ArticleDetail = ({ abstract, snippet }) => {
-  //   const { _id } = useParams()
+const ArticleDetail = (props) => {
+  const params = useParams()
+  // const { snippet, lead_paragraph, _id } = props.item
 
   return (
     <>
@@ -17,10 +18,11 @@ const ArticleDetail = ({ abstract, snippet }) => {
       <ContainerMedium>
         <HeadingFlex>
           <Link to="/">back to Home</Link>
-          <p>{abstract}</p>
+          <p>{params._id}</p>
           <Card title="testing artikel" />
-          <p>{snippet}</p>
-          {/* <img
+          {/*<p>{snippet}</p>
+          <p>{_id}</p>
+           <img
           src={`https://nytimes.com/${multimedia[1].url}`}
           className="rainbow-p-around_xx-large rainbow-m_auto rainbow-align-content_center"
           alt="landscape with rainbows, birds and colorful balloons"
