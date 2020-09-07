@@ -18,7 +18,7 @@ const ArticleDetail = (props) => {
       <ContainerMedium>
         <HeadingFlex>
           <Link to="/">back to Home</Link>
-          <p>{params._id}</p>
+          <p>{params.id}</p>
           <Card title="testing artikel" />
           {/*<p>{snippet}</p>
           <p>{_id}</p>

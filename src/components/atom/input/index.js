@@ -3,9 +3,9 @@ import { Input } from 'react-rainbow-components'
 
 const SearchInput = (props) => (
   <Input
-    label="Input label"
+    label="Input your Subject"
     placeholder="Input with inline help"
-    bottomHelpText="ex: (111) 111 1111"
+    bottomHelpText="ex: New York Times Subject"
     className="rainbow-m-vertical_x-large rainbow-p-horizontal_medium rainbow-m_auto"
     {...props}
   />

@@ -16,8 +16,8 @@ const Article = (props) => {
 
         <p>{lead_paragraph}</p>
         <Button
-          label="Button Outline Brand"
-          variant="outline-brand"
+          label="Button Border"
+          variant="neutral"
           className="rainbow-m-around_medium"
         >
           <Link to={_id.substr(6)}>Details</Link>
