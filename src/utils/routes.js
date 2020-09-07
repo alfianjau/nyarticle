@@ -9,10 +9,10 @@ const AppRoutes = () => {
       <Route exact path="/">
         Home
       </Route>
-      <Route exact path="/article/:id">
+      <Route path="/article">
         <ArticleDetail />
       </Route>
-      <Redirect to="/" />
+      <Redirect to="/">back to Home</Redirect>
     </Switch>
   )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-// import { useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { ContainerMedium } from '../globalStyled'
 import { HeadingFlex } from './styled'
 import { Card } from 'react-rainbow-components'
@@ -17,13 +17,13 @@ const ArticleDetail = () => {
 
       <ContainerMedium>
         <HeadingFlex>
-          <Card>
-            {/* <img
+          <Link to="/">back to Home</Link>
+          <Card title="testing artikel" />
+          {/* <img
           src={`https://nytimes.com/${multimedia[1].url}`}
           className="rainbow-p-around_xx-large rainbow-m_auto rainbow-align-content_center"
           alt="landscape with rainbows, birds and colorful balloons"
         /> */}
-          </Card>
         </HeadingFlex>
       </ContainerMedium>
     </>
