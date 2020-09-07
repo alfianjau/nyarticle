@@ -2,7 +2,7 @@ import React from 'react'
 import { Card } from 'react-rainbow-components'
 
 const Article = (props) => {
-  const { snippet, lead_paragraph, multimedia } = props.item
+  const { snippet, lead_paragraph } = props.item
 
   return (
     <div className="rainbow-p-around_large">

@@ -94,7 +94,7 @@ function App() {
     <div className="App">
       <Application
         theme={themes[theme]}
-        className="rainbow-p-vertical_xx-large rainbow-align-content_center"
+        className="rainbow-align-content_center"
       >
         <Router>
           <Layout onSwitchTheme={toggleTheme} theme={theme}>
