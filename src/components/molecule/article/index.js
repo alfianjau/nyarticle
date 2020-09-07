@@ -7,11 +7,11 @@ const Article = (props) => {
   return (
     <div className="rainbow-p-around_large">
       <Card title={snippet}>
-        <img
-          src={`https://nytimes.com/${multimedia[0].url}`}
+        {/* <img
+          src={`https://nytimes.com/${multimedia[1].url}`}
           className="rainbow-p-around_xx-large rainbow-m_auto rainbow-align-content_center"
           alt="landscape with rainbows, birds and colorful balloons"
-        />
+        /> */}
         <span>{lead_paragraph}</span>
       </Card>
     </div>
