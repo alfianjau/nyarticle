@@ -39,6 +39,10 @@
   padding: 1.2rem;
 }
 
+.App-date {
+  font-size: 1.2rem;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

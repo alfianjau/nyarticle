@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useReducer, useContext } from 'react'
 import { Spinner } from 'react-rainbow-components'
-// import { BrowserRouter as Router, Link } from 'react-router-dom'
 import { StoreContext } from '../../utils/store'
 import debounce from 'lodash.debounce'
 import axios from 'axios'

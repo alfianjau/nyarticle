@@ -1,11 +1,11 @@
 import React from 'react'
-import { Link, useParams, useLocation } from 'react-router-dom'
+import moment from 'moment'
+import { Link, useLocation } from 'react-router-dom'
 import { FullImage } from '../../utils/constant'
 import { ContainerMedium } from '../globalStyled'
 import { Card, Button, Badge } from 'react-rainbow-components'
 
 const ArticleDetail = (props) => {
-  const params = useParams()
   const location = useLocation()
   const {
     web_url,
@@ -14,6 +14,7 @@ const ArticleDetail = (props) => {
     byline,
     keywords,
     abstract,
+    pub_date,
   } = location.item
 
   return (
@@ -43,7 +44,9 @@ const ArticleDetail = (props) => {
             </div>
           }
         >
-          <p>{params.id}</p>
+          <p className="App-date">
+            Published: {moment(pub_date).format('MMMM Do YYYY, h:mm:ss a')}
+          </p>
           {multimedia.length ? (
             <FullImage
               className="rainbow-p-around_xx-large"
