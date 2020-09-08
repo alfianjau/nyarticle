@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 const GitIcon = (props) => {
   const { theme, className, style } = props
 
-  const fillColor = theme === 'light' ? '#b2b2b2' : '#061C3F'
+  const fillColor = theme === 'dark' ? '#b2b2b2' : '#061C3F'
 
   return (
     <svg

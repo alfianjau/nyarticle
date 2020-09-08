@@ -1,15 +1,18 @@
 import React from 'react'
+import { ArticleList, ArticleStyled } from './styled'
 import Article from '../../molecule/article'
 
 const Articles = ({ articles }) => {
   return (
     <div className="article-listing">
-      <div className="article-list">
+      <ArticleList>
         {articles &&
           articles.map((article) => (
-            <Article key={article._id} item={article} />
+            <ArticleStyled key={article._id}>
+              <Article item={article} />
+            </ArticleStyled>
           ))}
-      </div>
+      </ArticleList>
     </div>
   )
 }

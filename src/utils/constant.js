@@ -1,3 +1,4 @@
+import styled from 'styled-components'
 export const MediaSizes = {
   sm: {
     width: '600px',
@@ -16,3 +17,13 @@ export const MediaSizes = {
     value: 1920,
   },
 }
+
+export const HorizontalPadding = styled.div`
+  padding: 0 1rem;
+`
+
+export const FullImage = styled.img`
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  width: 100%;
+`

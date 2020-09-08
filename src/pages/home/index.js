@@ -40,7 +40,11 @@ function Home() {
         onChange={(event) => setQuery(event.target.value)}
       />
       {hasError && <div>Something went wrong ...</div>}
-      {isLoading ? <Spinner /> : <Articles articles={articles} />}
+      {isLoading ? (
+        <Spinner variant="brand" />
+      ) : (
+        <Articles articles={articles} />
+      )}
     </div>
   )
 }
