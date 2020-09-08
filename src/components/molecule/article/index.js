@@ -12,7 +12,7 @@ const Article = (props) => {
         <HorizontalPadding>
           {multimedia.length ? (
             <ThumbImage
-              src={`https:nytimes.com/${multimedia[1].url}`}
+              src={`https://nytimes.com/${multimedia[1].url}`}
               alt={headline.main}
             />
           ) : (

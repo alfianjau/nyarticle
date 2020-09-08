@@ -50,7 +50,7 @@ const ArticleDetail = (props) => {
           {multimedia.length ? (
             <FullImage
               className="rainbow-p-around_xx-large"
-              src={`https:nytimes.com/${multimedia[1].url}`}
+              src={`https://nytimes.com/${multimedia[1].url}`}
               alt={headline.main}
             />
           ) : (

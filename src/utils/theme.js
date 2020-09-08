@@ -1,3 +1,5 @@
+// theme coloring definition
+
 const themes = {
   light: {
     rainbow: {
