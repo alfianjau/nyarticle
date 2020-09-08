@@ -43,6 +43,12 @@
   font-size: 1.2rem;
 }
 
+.App-lead_paragraph {
+  text-align: left;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

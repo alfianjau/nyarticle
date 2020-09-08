@@ -27,3 +27,11 @@ export const FullImage = styled.img`
   padding-bottom: 1.5rem;
   width: 100%;
 `
+
+export const ThumbImage = styled.img`
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+`

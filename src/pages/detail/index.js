@@ -13,7 +13,7 @@ const ArticleDetail = (props) => {
     headline,
     byline,
     keywords,
-    abstract,
+    lead_paragraph,
     pub_date,
   } = location.item
 
@@ -70,7 +70,7 @@ const ArticleDetail = (props) => {
                 title="the badge title"
               />
             ))}
-          <p className="App-abstract">{abstract}</p>
+          <p className="App-abstract">{lead_paragraph}</p>
         </Card>
       </ContainerMedium>
     </>
