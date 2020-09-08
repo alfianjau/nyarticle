@@ -22,7 +22,7 @@ const Header = ({ onSwitchTheme, theme }) => {
         </Link>
       </LogoWrapper>
       <TopActions>
-        <TopAction href="#">
+        <TopAction href="/">
           <ButtonIcon icon={switchIcon} size="large" onClick={onSwitchTheme} />
         </TopAction>
         <TopAction href={gitUrl} target="_blank">

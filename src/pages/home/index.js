@@ -31,7 +31,7 @@ function Home() {
     )
     debouncedFetchHits()
     return () => cancel('No longer latest query') || debouncedFetchHits.cancel()
-  }, [query, subject])
+  }, [query])
 
   return (
     <div>

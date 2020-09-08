@@ -3,6 +3,7 @@ import { MediaSizes } from '../../utils/constant'
 
 export const HeadingFlex = styled.div`
   display: flex;
+  flex-direction: column;
   margin-bottom: 40px;
   justify-content: space-between;
   align-items: flex-start;
