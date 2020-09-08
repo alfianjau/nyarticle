@@ -3,9 +3,6 @@ import { Link, useParams, useLocation } from 'react-router-dom'
 import { ContainerMedium } from '../globalStyled'
 import { HeadingFlex } from './styled'
 import { Card } from 'react-rainbow-components'
-// import BackLink from '../../components/back-link'
-
-// const homeUrl = '/'
 
 const ArticleDetail = (props) => {
   const params = useParams()
