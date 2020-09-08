@@ -2,12 +2,12 @@ import React from 'react'
 import { Link, useParams, useLocation } from 'react-router-dom'
 import { ContainerMedium } from '../globalStyled'
 import { HeadingFlex } from './styled'
-import { Card, CarouselCard, CarouselImage } from 'react-rainbow-components'
+import { Card } from 'react-rainbow-components'
 
 const ArticleDetail = (props) => {
   const params = useParams()
   const location = useLocation()
-  const { snippet, lead_paragraph, multimedia } = location.item
+  const { snippet, lead_paragraph, multimedia, headline } = location.item
 
   return (
     <>
@@ -15,18 +15,17 @@ const ArticleDetail = (props) => {
         <HeadingFlex>
           <Link to="/">back to Home</Link>
           <p>{params.id}</p>
-          <CarouselCard className="rainbow-m_auto">
-            {!!multimedia &&
-              multimedia.map((image, i) => (
-                <CarouselImage
-                  src={`https:nytimes.com/${image.url}`}
-                  header={image.subtype}
-                  description="First card description."
-                  alternativeText="First card accessible description."
-                />
-              ))}
-          </CarouselCard>
-          <Card title={snippet} />
+          <Card title={snippet}>
+            {multimedia.length ? (
+              <img
+                src={`https:nytimes.com/${multimedia[1].url}`}
+                alt={headline.main}
+              />
+            ) : (
+              <span> no comment</span>
+            )}
+            <p>{headline.main}</p>
+          </Card>
           <p>{lead_paragraph}</p>
         </HeadingFlex>
       </ContainerMedium>
