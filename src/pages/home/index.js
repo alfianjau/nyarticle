@@ -1,6 +1,7 @@
-import React, { useState, useEffect, useReducer } from 'react'
+import React, { useState, useEffect, useReducer, useContext } from 'react'
 import { Spinner } from 'react-rainbow-components'
 // import { BrowserRouter as Router, Link } from 'react-router-dom'
+import { StoreContext } from '../../utils/store'
 import debounce from 'lodash.debounce'
 import axios from 'axios'
 import { fetchReducer, fetchHits } from '../../utils/services'
@@ -8,10 +9,12 @@ import SearchInput from '../../components/atom/input'
 import Articles from '../../components/particle/articles'
 
 function Home() {
+  const { setArticles } = useContext(StoreContext)
+
   const [{ articles, hasError, isLoading }, dispatch] = useReducer(
     fetchReducer,
     {
-      articles: [],
+      setArticles,
       isLoading: true,
       hasError: false,
     }

@@ -1,5 +1,4 @@
 import axios from 'axios'
-
 // create redux like mutation
 export function fetchReducer(state, action) {
   switch (action.type) {

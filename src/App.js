@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import StoreProvider from './utils/store'
 import themes from './utils/theme'
 import { Application } from 'react-rainbow-components'
 import { BrowserRouter as Router } from 'react-router-dom'
@@ -23,16 +24,18 @@ function App() {
   }
 
   return (
-    <Application
-      theme={themes[theme]}
-      className="App rainbow-align-content_center"
-    >
-      <Router>
-        <Layout onSwitchTheme={toggleTheme} theme={theme}>
-          <AppRoutes />
-        </Layout>
-      </Router>
-    </Application>
+    <StoreProvider>
+      <Application
+        theme={themes[theme]}
+        className="App rainbow-align-content_center"
+      >
+        <Router>
+          <Layout onSwitchTheme={toggleTheme} theme={theme}>
+            <AppRoutes />
+          </Layout>
+        </Router>
+      </Application>
+    </StoreProvider>
   )
 }
 
