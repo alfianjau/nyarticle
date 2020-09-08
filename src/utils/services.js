@@ -1,30 +1,4 @@
 import axios from 'axios'
-// create redux like mutation
-export function fetchReducer(state, action) {
-  switch (action.type) {
-    case 'FETCH_START':
-      return {
-        ...state,
-        isLoading: true,
-        hasError: false,
-      }
-    case 'FETCH_SUCCESS':
-      return {
-        ...state,
-        isLoading: false,
-        hasError: false,
-        articles: action.payload,
-      }
-    case 'FETCH_FAILURE':
-      return {
-        ...state,
-        isLoading: false,
-        hasError: true,
-      }
-    default:
-      throw new Error()
-  }
-}
 
 // create async function for axios instance
 export async function fetchHits(query, dispatch, cancelToken) {
