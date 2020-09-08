@@ -20,7 +20,7 @@ const Article = (props) => {
           variant="neutral"
           className="rainbow-m-around_medium"
         >
-          <Link to={_id.substr(6)}>Details</Link>
+          <Link to={{ pathname: _id.substr(6), ...props }}>Details</Link>
         </Button>
       </Card>
     </div>

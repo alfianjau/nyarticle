@@ -9,18 +9,18 @@ import SearchInput from '../../components/atom/input'
 import Articles from '../../components/particle/articles'
 
 function Home() {
-  const { setArticles } = useContext(StoreContext)
+  const { subject } = useContext(StoreContext)
 
   const [{ articles, hasError, isLoading }, dispatch] = useReducer(
     fetchReducer,
     {
-      setArticles,
+      articles: [],
       isLoading: true,
       hasError: false,
     }
   )
 
-  const [query, setQuery] = useState('new york')
+  const [query, setQuery] = useState(subject[0])
 
   useEffect(() => {
     const { cancel, token } = axios.CancelToken.source()
@@ -30,7 +30,7 @@ function Home() {
     )
     debouncedFetchHits()
     return () => cancel('No longer latest query') || debouncedFetchHits.cancel()
-  }, [query])
+  }, [query, subject])
 
   return (
     <div>
