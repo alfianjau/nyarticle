@@ -3,18 +3,20 @@ import { render } from '@testing-library/react'
 import { shallow, mount } from 'enzyme'
 import App from './App'
 
-it('renders without crashing', () => {
-  shallow(<App />)
-})
+describe('Home component test', () => {
+  it('renders without crashing', () => {
+    shallow(<App />)
+  })
 
-it('renders title', () => {
-  const wrapper = mount(<App />)
-  const title = <h3 className="App-heading">New York Timers React app</h3>
-  expect(wrapper.contains(title)).toEqual(true)
-})
+  it('renders title', () => {
+    const wrapper = mount(<App />)
+    const title = <h3 className="App-heading">New York Timers React app</h3>
+    expect(wrapper.contains(title)).toEqual(true)
+  })
 
-test('renders label', () => {
-  const { getByText } = render(<App />)
-  const linkElement = getByText(/Input your Subject/i)
-  expect(linkElement).toBeInTheDocument()
+  test('renders label', () => {
+    const { getByText } = render(<App />)
+    const linkElement = getByText(/Input your Subject/i)
+    expect(linkElement).toBeInTheDocument()
+  })
 })
