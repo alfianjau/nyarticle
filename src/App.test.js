@@ -16,7 +16,7 @@ describe('Home component test', () => {
 
   test('renders label', () => {
     const { getByText } = render(<App />)
-    const linkElement = getByText(/Input your Subject/i)
+    const linkElement = getByText(/Type a subject to find/i)
     expect(linkElement).toBeInTheDocument()
   })
 })

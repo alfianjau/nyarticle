@@ -6,7 +6,7 @@ export const HeadingLabel = styled.div`
   transition: all 200ms ease;
   max-height: 20px;
   overflow: hidden;
-  /* stylelint-disable-next-line value-keyword-case */
+
   ${(props) => props.searchState && props.searchState.query && 'max-height: 0;'}
   color: ${(props) => props.theme.rainbow.palette.text.title};
   @media screen and (max-width: 991px) {

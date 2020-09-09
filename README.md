@@ -4,16 +4,17 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Stacks Used on this project
 
-- React JS
-- React Rainbow UI KIT
-- Axios
-- Lodash
-- MomentJS
-- NY time API
-- Styled components
-- React router
-- React Hooks
-- Jest, Enzyme
+- [React JS](https://reactjs.org/)
+- [React Rainbow UI KIT](https://react-rainbow.io/)
+- [Axios](https://github.com/axios/axios)
+- [Lodash](https://lodash.com/)
+- [MomentJS](https://momentjs.com/)
+- [NY time API](https://developer.nytimes.com/)
+- [Styled components](https://styled-components.com/)
+- [React router](https://reactrouter.com/)
+- [React Hooks](https://reactjs.org/docs/hooks-overview.html)
+- [Jest](https://jestjs.io/)
+- [Enzyme](https://enzymejs.github.io/enzyme/)
 
 ## Available Scripts
 
