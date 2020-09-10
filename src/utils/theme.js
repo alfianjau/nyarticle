@@ -4,20 +4,20 @@ const themes = {
   light: {
     rainbow: {
       palette: {
-        brand: '#003e39',
-        mainBackground: '#49cfc3',
+        brand: '#02afa0',
+        mainBackground: '#DAF3F1',
         success: '#208e75',
-        secondary: '#001715',
+        secondary: '#DAF3F1',
       },
     },
   },
   dark: {
     rainbow: {
       palette: {
-        brand: '#f6ad55',
-        mainBackground: '#333c4c',
+        brand: '#2F243A',
+        mainBackground: '#2F243A',
         success: '#aa8109',
-        secondary: '#aa4109',
+        secondary: '##DAF3F1',
       },
     },
   },

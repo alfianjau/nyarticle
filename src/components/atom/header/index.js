@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { ButtonIcon } from 'react-rainbow-components'
 import { Link } from 'react-router-dom'
 import { MoonIcon, SunIcon, GitIcon } from '../icons'
-import { Wrapper, LogoWrapper, Logo, TopActions, TopAction } from './styled'
-import logo from '../../../logo.svg'
+import { Wrapper, LogoWrapper, TopActions, TopAction } from './styled'
+// import logo from '../../../logo.svg'
 
 const homePageUrl = '/'
 const gitUrl = 'https://github.com/alfianjau/nyarticle'
@@ -17,8 +17,8 @@ const Header = ({ onSwitchTheme, theme }) => {
   return (
     <Wrapper>
       <LogoWrapper>
-        <Link to={homePageUrl}>
-          <Logo src={logo} />
+        <Link className="App-logo" to={homePageUrl}>
+          NYT
         </Link>
       </LogoWrapper>
       <TopActions>

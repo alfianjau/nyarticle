@@ -28,9 +28,10 @@
   color: #61dafb;
 }
 
-.App-heading {
-  font-size: 1.8rem;
+.App-logo {
+  font-size: 2.4rem;
   font-weight: bold;
+  color: var(--primary);
 }
 
 .App-abstract {
@@ -47,6 +48,30 @@
   text-align: left;
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.App-input label {
+  text-transform: uppercase;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+  align-self: flex-start;
+  font-size: 2.1rem;
+  color: var(--primary);
+}
+
+.App-input input {
+  border-radius: 9px;
+  background: linear-gradient(315deg, #02bbab, #029e90);
+  box-shadow: -5px -5px 12px #029a8d, 5px 5px 12px #02c4b3;
+  height: 4.2rem;
+  font-size: 1.8rem;
+  border: none;
+  color: white;
+}
+.App-input input:focus {
+  border-radius: 9px;
+  background: linear-gradient(145deg, #029e90, #02bbab);
+  box-shadow: 5px 5px 12px #029a8d, -5px -5px 12px #02c4b3;
 }
 
 @keyframes App-logo-spin {
