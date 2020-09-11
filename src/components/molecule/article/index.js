@@ -51,7 +51,7 @@ const Article = (props) => {
               className="App-card_link"
               to={{ pathname: _id.substr(6), ...props }}
             >
-              Details
+              Detailed info
             </Link>
           </HorizontalPadding>
         </VerticalPadding>
