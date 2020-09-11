@@ -10,15 +10,18 @@ export const Wrapper = styled.div`
   max-width: 1393px;
   padding: 20px 20px 0 20px;
   justify-content: space-between;
+  z-index: 10;
 `
 
 export const LogoWrapper = styled.div`
   display: inline-block;
+  z-index: 10;
 `
 
 export const Logo = styled.img`
   width: 48px;
   transition: all 350ms ease;
+  z-index: 10;
   @media screen and (max-width: ${MediaSizes.md.width}) {
     width: 38px;
   }
@@ -26,6 +29,7 @@ export const Logo = styled.img`
 
 export const TopActions = styled.div`
   display: inline-block;
+  z-index: 10;
 `
 
 export const TopAction = styled.a`

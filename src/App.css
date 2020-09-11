@@ -5,6 +5,9 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: var(--darken);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -28,12 +31,6 @@
   color: #61dafb;
 }
 
-.App-logo {
-  font-size: 2.4rem;
-  font-weight: bold;
-  color: var(--primary);
-}
-
 .App-abstract {
   font-size: 1.2rem;
   margin: 3rem auto;
@@ -48,6 +45,11 @@
   text-align: left;
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.App-input {
+  margin-bottom: 6rem;
+  margin-top: 6rem;
 }
 
 .App-input label {

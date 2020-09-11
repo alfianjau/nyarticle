@@ -15,4 +15,8 @@ code {
 :root {
   --primary: #02afa0;
   --secondary: #daf3f1;
+  --terniary: #17e3cf;
+  --quartet: #4ffdee;
+  --penta: #02b0a1;
+  --darken: #007e73;
 }
