@@ -93,6 +93,10 @@
   box-shadow: 5px 5px 12px #029a8d, -5px -5px 12px #02c4b3;
 }
 
+.App-spinner {
+  margin-top: 6rem;
+}
+
 .App-card {
   background-color: var(--secondary);
   background: linear-gradient(
@@ -103,6 +107,7 @@
   );
   border: none;
   box-shadow: 0 0 black !important;
+  border: none !important;
 }
 
 .App-card__content {
@@ -168,5 +173,14 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .App-dots {
+    display: none;
+  }
+  .App-input label {
+    font-size: 1.5rem;
   }
 }

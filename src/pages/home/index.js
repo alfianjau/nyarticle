@@ -41,7 +41,7 @@ function Home() {
       />
       {hasError && <div>Something went wrong ...</div>}
       {isLoading ? (
-        <Spinner variant="brand" />
+        <Spinner className="App-spinner" variant="brand" />
       ) : (
         <Articles articles={articles} />
       )}
