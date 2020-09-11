@@ -3,6 +3,8 @@ import styled from 'styled-components'
 export const ArticleList = styled.div`
   display: flex;
   flex-wrap: wrap;
+  margin-left: -1.2rem;
+  margin-right: -1.2rem;
 `
 
 export const ArticleStyled = styled.div`

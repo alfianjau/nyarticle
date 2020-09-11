@@ -1,8 +1,12 @@
 import React from 'react'
-import { Card, Button } from 'react-rainbow-components'
+import { Card } from 'react-rainbow-components'
 import { useSpring, animated } from 'react-spring'
 import { Link } from 'react-router-dom'
-import { HorizontalPadding, ThumbImage } from '../../../utils/constant'
+import {
+  HorizontalPadding,
+  VerticalPadding,
+  ThumbImage,
+} from '../../../utils/constant'
 
 const calc = (x, y) => [
   -(y - window.innerHeight / 2) / 60,
@@ -26,29 +30,31 @@ const Article = (props) => {
       onMouseLeave={() => setSpring({ xys: [0, 0, 1] })}
       style={{ transform: spring.xys.interpolate(trans) }}
     >
-      <Card footer={<span>{source}</span>}>
-        <HorizontalPadding>
-          {multimedia.length ? (
-            <ThumbImage
-              src={`https://nytimes.com/${multimedia[1].url}`}
-              alt={headline.main}
-            />
-          ) : (
-            <ThumbImage
-              src="https://via.placeholder.com/400x600.png?text=Thou shalt find image"
-              alt={headline.main}
-            />
-          )}
-          <div className="App-title">{headline.main}</div>
-          <p className="App-lead_paragraph">{abstract}</p>
-          <Button
-            label="Button Border"
-            variant="neutral"
-            className="rainbow-m-around_medium"
-          >
-            <Link to={{ pathname: _id.substr(6), ...props }}>Details</Link>
-          </Button>
-        </HorizontalPadding>
+      <Card className="App-card">
+        {multimedia.length ? (
+          <ThumbImage
+            src={`https://nytimes.com/${multimedia[1].url}`}
+            alt={headline.main}
+          />
+        ) : (
+          <ThumbImage
+            src="https://via.placeholder.com/400x600.png?text=Thou shalt find image"
+            alt={headline.main}
+          />
+        )}
+        <VerticalPadding className="App-card__content">
+          <HorizontalPadding>
+            <span className="App-card__inset">{source}</span>
+            <div className="App-card__title">{headline.main}</div>
+            <p className="App-card__paragraph">{abstract}</p>
+            <Link
+              className="App-card_link"
+              to={{ pathname: _id.substr(6), ...props }}
+            >
+              Details
+            </Link>
+          </HorizontalPadding>
+        </VerticalPadding>
       </Card>
     </animated.div>
   )

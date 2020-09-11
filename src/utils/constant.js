@@ -21,6 +21,9 @@ export const MediaSizes = {
 export const HorizontalPadding = styled.div`
   padding: 0 1rem;
 `
+export const VerticalPadding = styled.div`
+  padding: 1rem 0;
+`
 
 export const FullImage = styled.img`
   padding-top: 1.5rem;
@@ -29,9 +32,8 @@ export const FullImage = styled.img`
 `
 
 export const ThumbImage = styled.img`
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
   width: 100%;
   height: 400px;
   object-fit: cover;
+  border-radius: 0 0 2.1rem 2.1rem;
 `
